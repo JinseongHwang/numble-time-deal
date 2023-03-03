@@ -25,6 +25,9 @@ spring:
         use_sql_comments: true
     open-in-view: false
     defer-datasource-initialization: true
+  redis:
+    host: localhost
+    port: 6379
   h2:
     console:
       enabled: true
@@ -71,6 +74,9 @@ spring:
       hibernate:
         format_sql: true
     open-in-view: false
+  redis:
+    host: localhost
+    port: 6379
 
 logging:
   level:
