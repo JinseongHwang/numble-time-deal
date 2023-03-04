@@ -25,6 +25,10 @@ public class ProductEntity extends BaseEntity {
     private String name;
 
     @NotNull
+    @Column(name = "start_time")
+    private LocalDateTime startTime;
+
+    @NotNull
     @Column(name = "cutoff_time")
     private LocalDateTime cutoffTime;
 
@@ -45,8 +49,9 @@ public class ProductEntity extends BaseEntity {
     }
 
     @Builder
-    public ProductEntity(String name, LocalDateTime cutoffTime, Long listPrice, DiscountPolicyEntity discountPolicy, Long stockAmount) {
+    public ProductEntity(String name, LocalDateTime startTime, LocalDateTime cutoffTime, Long listPrice, DiscountPolicyEntity discountPolicy, Long stockAmount) {
         this.name = name;
+        this.startTime = startTime;
         this.cutoffTime = cutoffTime;
         this.listPrice = listPrice;
         this.discountPolicy = discountPolicy;
